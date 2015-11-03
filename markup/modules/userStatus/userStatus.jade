@@ -1,0 +1,18 @@
+include ../_svg/_svg
+
+mixin userStatus(data)
+  .userStatus
+    .userStatus_iconGroup
+      .userStatus_icon.-comparison
+        +_svg('icon-cart')
+        .userStatus_count 1
+      .userStatus_icon.-like
+        +_svg('icon-comparison')
+        .userStatus_count 2
+      .userStatus_icon.-cart
+        +_svg('icon-like')
+        .userStatus_count
+
+    .userStatus_dropdown
+      .userStatus_name Константин
+

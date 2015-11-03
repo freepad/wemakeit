@@ -1,0 +1,81 @@
+.userStatus
+  text-align right
+
+  &_iconGroup
+    height 48px
+    display inline-block
+
+    m-cf()
+
+  &_icon
+    display flex
+    align-items center
+    justify-content flex-start
+    float left
+    height 48px
+    width 44px
+
+    fill #757575
+
+    transition: fill .3s
+
+    cursor pointer
+
+    &:hover,
+    &.-active
+      fill #db4e47
+
+    &.-comparison svg
+      width 20px
+      height 22px
+
+    &.-like svg
+      width 22px
+      height 20px
+
+    &.-cart svg
+      width 22px
+      height 20px
+
+  &_count
+    display inline-block
+    padding 0 4px
+    margin-top 7px
+
+    color white
+    font-family HelveticaNeue
+    font-size 12px
+    font-weight 700
+    line-height 28px
+
+  &_dropdown
+    position relative
+
+    display inline-block
+    padding-right 13px
+    float right
+
+    cursor pointer
+
+    &::after
+      content ''
+
+      position absolute
+      top 52%
+      right 0
+
+      display block
+      width 6px
+      height 5px
+
+      bg-svg($arrow-dropdown)
+
+      transform translateY(-50%)
+
+  &_name
+    line-height 48px
+    color white
+    font-family HelveticaNeue
+    font-size 14px
+    font-weight 700
+

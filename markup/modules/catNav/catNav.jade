@@ -1,0 +1,26 @@
+include ../_svg/_svg
+
+mixin catNav(data)
+  .catNav
+
+    .catNav_wrapper
+
+      img(src='%=staticPrefix=%img/assets/catNav/logo.png').catNav_brand
+
+      .catNav_menu
+        .catNav_parentWrapper
+          each item, index in data
+            span(data-cat='').catNav_parentCat
+              .catNav_parentCatName #{item.name}
+              .catNav_childrenWrapper
+                each children in item.subcategories
+                  .catNav_childrenCol
+                    .catNav_childrenTitle #{children.name}
+                    each childrenItem in children.items
+                      a(href='#').catNav_childrenItem #{childrenItem}
+
+      .catNav_search
+        +_svg('icon-search')
+
+
+

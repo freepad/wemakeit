@@ -12,6 +12,12 @@ insert_final_newline = true
 [*.md]
 trim_trailing_whitespace = false
 
+[*.jade]
+indent_size = 2
+
+[*.styl]
+indent_size = 2
+
 [node_modules/**.js]
 codepaint = false
 

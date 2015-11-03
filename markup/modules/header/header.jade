@@ -1,0 +1,17 @@
+include ../nav/nav
+include ../callback/callback
+include ../userStatus/userStatus
+
+mixin header(data)
+  .header
+
+    .header_wrapper
+
+      .header_nav
+        +nav(nav)
+
+      .header_callback
+        +callback()
+
+      .header_userStatus
+        +userStatus()

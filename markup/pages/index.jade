@@ -5,22 +5,27 @@ doctype html
 |<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ru"><!--<![endif]-->
 
 include ../modules/head/head
-include ../modules/example/example
+include ../modules/header/header
+include ../modules/_allSVG/_allSVG
 include ../modules/footer/footer
+include ../modules/catNav/catNav
 
 head
     +head(head.defaults)
 body.page
+  section.page__wrapper
 
-    section.page__wrapper
+    +header()
 
-        //- Include your modules here
-        +example()
+    .main
+      +catNav(catNav)
 
-        .page__buffer
+    .page__buffer
 
-    .page__footer
-        +footer()
+  .page__footer
+    +footer()
 
-    //- Main scripts. You can replace it, but I recommend you to leave it here
-    script(src='%=staticPrefix=%js/main%=hash=%%=min=%.js')
+  +_allSVG()
+
+  //- Main scripts. You can replace it, but I recommend you to leave it here
+  script(src='%=staticPrefix=%js/main%=hash=%%=min=%.js')

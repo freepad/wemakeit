@@ -1,0 +1,4 @@
+mixin nav(data)
+  .nav
+    for item in data
+      a.nav_item(href='#{item.link}') #{item.name}
